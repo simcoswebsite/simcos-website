@@ -11,13 +11,13 @@ const Logo = () => {
       rounded-full 
       items-center 
       justify-center 
-      h-[250px] 
-      w-[250px]">
+      h-[253px] 
+      w-[253px]">
       <Image
         alt="An image of Simco's logo"
-        // className="rounded-2xl m-[14px]"
         src="/simcos-logo.png"
         fill
+        objectFit="none"
       />
     </div>
   )

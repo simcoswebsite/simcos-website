@@ -12,7 +12,7 @@ const LandingPage = () =>{
       <div className="relative w-full h-full basis-1/3 grow">
         <Image
           src="/grill-hot-dogs.jpg"
-          // className="w-full h-full"
+          className="w-full h-full"
           fill
           alt="Picture of hot dogs on a grill" 
         />

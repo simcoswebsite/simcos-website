@@ -7,19 +7,14 @@ const Logo = () => {
       bg-[#EBD6B7] 
       flex 
       flex-col
-      relative 
+      relative
       rounded-full 
       items-center 
-      justify-center 
-      h-[253px] 
-      w-[253px]
+      justify-items-center 
+      h-64 
+      w-64
+      overflow-visible
     ">
-      <Image
-        alt="An image of Simco's logo"
-        src="/simcos-logo.png"
-        fill
-        objectFit="none"
-      />
     </div>
   )
 }

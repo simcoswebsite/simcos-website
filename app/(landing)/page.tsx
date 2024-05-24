@@ -14,8 +14,16 @@ const LandingPage = () =>{
       items-center 
       justify-center
     ">
-      <div className="basis-1/3 grow">
+      <div className="basis-1/3 grow relative">
         <Logo />
+        <Image
+        alt="An image of Simco's logo"
+        src="/simcos-logo.png"
+        width={300}
+        height={300}
+        objectFit="none"
+        style={{position:"absolute"}}
+      />
       </div>
       <div className="relative w-full h-full basis-1/3 grow">
         <Image
@@ -37,7 +45,7 @@ const LandingPage = () =>{
           justify-items-center
         ">
           <h1 className="text-white font-bold text-[40px]">Hungry?</h1>
-          <Button variant={"simcos"} size={"xl"}>Get Started</Button>
+          <Button variant={"simcos"}>Get Started</Button>
           {/* hi */}
       </div>
     </div>

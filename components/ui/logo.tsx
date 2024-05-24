@@ -11,10 +11,17 @@ const Logo = () => {
       rounded-full 
       items-center 
       justify-items-center 
-      h-64 
-      w-64
+      h-58 
+      w-58
       overflow-visible
     ">
+      <Image
+        alt="An image of Simco's logo"
+        src="/simcos-logo.png"
+        fill
+        objectFit="none"
+        style={{overflow:"visible",top:"1.8125rem"}}
+      />
     </div>
   )
 }

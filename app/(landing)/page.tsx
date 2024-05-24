@@ -14,21 +14,13 @@ const LandingPage = () =>{
       items-center 
       justify-center
     ">
-      <div className="basis-1/3 grow relative">
+      <div className="basis-1/3 relative">
         <Logo />
-        <Image
-        alt="An image of Simco's logo"
-        src="/simcos-logo.png"
-        width={300}
-        height={300}
-        objectFit="none"
-        style={{position:"absolute"}}
-      />
       </div>
-      <div className="relative w-full h-full basis-1/3 grow">
+      <div className="relative w-full h-full min-h-33vh basis-1/3 grow">
         <Image
           src="/grill-hot-dogs.jpg"
-          className="w-full h-full"
+          className="h-full"
           fill
           alt="Picture of hot dogs on a grill" 
         />

@@ -37,7 +37,7 @@ const LandingPage = () =>{
           justify-items-center
         ">
           <h1 className="text-white font-bold text-[40px]">Hungry?</h1>
-          <Button>Get Started</Button>
+          <Button variant={"simcos"} size={"xl"}>Get Started</Button>
           {/* hi */}
       </div>
     </div>

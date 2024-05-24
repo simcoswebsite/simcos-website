@@ -12,7 +12,8 @@ const Logo = () => {
       items-center 
       justify-center 
       h-[253px] 
-      w-[253px]">
+      w-[253px]
+    ">
       <Image
         alt="An image of Simco's logo"
         src="/simcos-logo.png"

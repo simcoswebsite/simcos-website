@@ -14,8 +14,20 @@ const LandingPage = () =>{
       items-center 
       justify-center
     ">
-      <div className="basis-1/3 relative grow min-w-full border-solid border-2 border-white">
-        {/* <Logo /> */}
+      <div className="
+        basis-1/3 
+        relative 
+        grow 
+        min-w-full 
+        border-solid 
+        border-2 
+        border-white
+        flex
+        flex-col
+        items-center 
+        justify-items-center
+        ">
+          <Logo />
       </div>
       <div className="relative basis-1/3">
         <Image

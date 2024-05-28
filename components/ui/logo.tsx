@@ -7,7 +7,7 @@ const Logo = () => {
       bg-[#EBD6B7] 
       flex 
       flex-col
-      relative
+      absolute
       rounded-full 
       items-center 
       justify-items-center 

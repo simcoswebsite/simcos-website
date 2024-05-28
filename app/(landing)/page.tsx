@@ -14,7 +14,7 @@ const LandingPage = () =>{
       items-center 
       justify-center
     ">
-      <div className="basis-1/3 relative">
+      <div className="basis-1/3 relative grow">
         <Logo />
       </div>
       <div className="relative w-full h-full min-h-33vh basis-1/3 grow">

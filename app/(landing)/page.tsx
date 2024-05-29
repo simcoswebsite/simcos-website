@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import Logo from "@/components/ui/logo"
 import Link from "next/link"
 import Image from 'next/image'
+import { bevan } from '@/fonts'
 
 const LandingPage = () =>{
   return(
@@ -55,8 +56,9 @@ const LandingPage = () =>{
           items-center 
           justify-items-center
         ">
-          <h1 className="text-white font-bold text-[40px] m-8">Hungry?</h1>
-          <Button variant={"simcos"}>Get Started</Button>
+          <h1 className={`text-white text-[40px] m-8 mb-4 ${bevan.className}`}>HUNGRY?
+          </h1>
+          <Button variant={"simcos"} size={"xl"} className={bevan.className}>GET STARTED</Button>
           {/* hi */}
       </div>
     </div>

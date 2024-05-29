@@ -19,7 +19,7 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         simcos:
-          "bg-[#EBD6B7] text-[#EF370D] rounded-full border-8 border-solid border-[#EF370D] hover:bg-[#EBD6B7]/90",
+          "bg-[#EBD6B7] text-[#EF370D] text-[20px] rounded-full border-[0.3125rem] border-solid border-[#EF370D] hover:bg-[#EBD6B7]/90",
           /**
            *absolute w-198 h-60 left-97 top-612 bg-[#EBD6B7] border-5 border-solid border-[#EF370D] rounded-full
            */
@@ -29,7 +29,7 @@ const buttonVariants = cva(
         sm: "h-9 rounded-md px-3",
         lg: "h-11 rounded-md px-8",
         icon: "h-10 w-10",
-        xl: "h-15 w-50",
+        xl: "pt-6 pb-5 px-3 h-15",
       },
     },
     defaultVariants: {

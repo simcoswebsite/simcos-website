@@ -19,6 +19,7 @@ const config = {
     },
     extend: {
       height: {
+        '15': '3.75rem',
         '58': '14.5625rem'
       },
       width: {

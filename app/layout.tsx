@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { inter } from '@/fonts'
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
 
 //TODO:Gather information for the title and description from client
 //TODO: Need Favicon.ico file

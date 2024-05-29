@@ -58,7 +58,9 @@ const LandingPage = () =>{
         ">
           <h1 className={`text-white text-[40px] m-8 mb-4 ${bevan.className}`}>HUNGRY?
           </h1>
-          <Button variant={"simcos"} size={"xl"} className={bevan.className}>GET STARTED</Button>
+          <Link href="/sign-up">
+            <Button variant={"simcos"} size={"xl"} className={bevan.className}>GET STARTED</Button>
+          </Link>
           {/* hi */}
       </div>
     </div>

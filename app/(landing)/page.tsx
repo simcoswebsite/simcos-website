@@ -12,13 +12,17 @@ const LandingPage = () =>{
       flex 
       flex-col 
       items-center 
-      justify-center
+      justify-start
+      border-solid 
+        border-2 
+        border-green-300
     ">
       <div className="
         basis-1/3 
         relative 
         grow 
-        min-w-full 
+        min-w-full
+        max-h-[20vh] 
         border-solid 
         border-2 
         border-white
@@ -29,7 +33,7 @@ const LandingPage = () =>{
         ">
           <Logo />
       </div>
-      <div className="relative basis-1/3">
+      <div className="basis-1/3">
         <Image
           src="/grill-hot-dogs.jpg"
           height={305}
@@ -40,11 +44,15 @@ const LandingPage = () =>{
       <div 
         className="
           bg-gradient-to-tr from-[#3D3D3DDB] to-[#3D3D3D] 
-          min-w-full 
+          min-w-full
+          max-h-[30vh] 
           basis-1/3 
           grow 
           flex 
-          flex-col 
+          flex-col
+          border-solid 
+          border-2 
+        border-white 
           items-center 
           justify-items-center
         ">

@@ -13,6 +13,7 @@ const Logo = () => {
       justify-items-center 
       h-58 
       w-58
+      top-12
       overflow-visible
     ">
       <Image

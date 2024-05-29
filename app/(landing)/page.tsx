@@ -36,7 +36,7 @@ const LandingPage = () =>{
       <div className="basis-1/3">
         <Image
           src="/grill-hot-dogs.jpg"
-          height={305}
+          height={350}
           width={435}
           alt="Picture of hot dogs on a grill" 
         />
@@ -45,7 +45,6 @@ const LandingPage = () =>{
         className="
           bg-gradient-to-tr from-[#3D3D3DDB] to-[#3D3D3D] 
           min-w-full
-          max-h-[30vh] 
           basis-1/3 
           grow 
           flex 
@@ -56,7 +55,7 @@ const LandingPage = () =>{
           items-center 
           justify-items-center
         ">
-          <h1 className="text-white font-bold text-[40px]">Hungry?</h1>
+          <h1 className="text-white font-bold text-[40px] m-8">Hungry?</h1>
           <Button variant={"simcos"}>Get Started</Button>
           {/* hi */}
       </div>

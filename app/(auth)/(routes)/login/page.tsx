@@ -17,6 +17,7 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Checkbox } from '@/components/ui/checkbox'
+import { roboto, robotoCondensed, robotoBold} from '@/fonts'
  
 const formSchema = z.object({
   firstName: z.string().min(2, {
@@ -56,9 +57,13 @@ export default function LoginPage() {
   }
 
   return (
-    <div>
+    <div className='border-black border-solid border-2 w-full h-full px-6'>
+      <div className='flex justify-between py-3'>
+        <h1 className={`text-[20px] ${robotoCondensed.className}`}>Contact Information</h1>
+        <p className={`text-[16px] text-[#EF370D] underline ${robotoBold.className}`}>Sign In</p>
+      </div>
      <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 border-yellow-500 border-solid border-1">
         <FormField
           control={form.control}
           name="firstName"
@@ -111,16 +116,17 @@ export default function LoginPage() {
           control={form.control}
           name="enableEmails"
           render={({ field }) => (
-            <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4 shadow">
+            <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4">
               <FormControl>
                 <Checkbox
                   checked={field.value}
                   onCheckedChange={field.onChange}
+                  className='rounded-s-md h-[28px] w-[31px] border-2 border-black'
                 />
               </FormControl>
               <div className="space-y-1 leading-none">
-                <FormLabel>
-                  Checkbox for Emails
+                <FormLabel className={`text-[16px] ${roboto.className}`}>
+                Sign me up for Simco’s emails including a FREE welcome appetizer coupon, a FREE desert for my birthday, special offers and more.
                 </FormLabel>
               </div>
             </FormItem>
@@ -130,16 +136,17 @@ export default function LoginPage() {
           control={form.control}
           name="enableTexts"
           render={({ field }) => (
-            <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4 shadow">
+            <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4">
               <FormControl>
                 <Checkbox
                   checked={field.value}
                   onCheckedChange={field.onChange}
+                  className='rounded-s-md h-[28px] w-[31px] border-2 border-black'
                 />
               </FormControl>
               <div className="space-y-1 leading-none">
-                <FormLabel>
-                  Checkbox for texts
+                <FormLabel className={`text-[16px] ${roboto.className}`}>
+                Receive order info via text messages. This feature will allow the restaurant to be notified of your arrival via text. Message and data rates may apply.
                 </FormLabel>
               </div>
             </FormItem>

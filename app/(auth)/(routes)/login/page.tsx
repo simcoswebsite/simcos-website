@@ -94,7 +94,23 @@ export default function LoginPage() {
           render={({ field }) => (
             <FormItem>
               <FormControl>
-                <Input placeholder="Email" {...field} />
+                <Input 
+                  placeholder={`Email`} {...field}
+                  className={`
+                  ${robotoBold.className}
+                  bg-[#EDEDED] 
+                  rounded-[50px] 
+                  border-t-0 
+                  border-b-2 
+                  border-x-0 
+                  border-black
+                  placeholder:${robotoBold.className}
+                  placeholder:text-black
+                  placeholder:text-[16px]
+                  placeholder:font-bold
+                  focus:border-none
+                  `} 
+                />
               </FormControl>
               <FormMessage />
             </FormItem>

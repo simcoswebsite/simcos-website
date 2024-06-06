@@ -22,6 +22,7 @@ const Logo = () => {
         fill
         objectFit="none"
         style={{overflow:"visible",top:"1.8125rem"}}
+        priority={true}
       />
     </div>
   )

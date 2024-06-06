@@ -18,6 +18,7 @@ import {
 import { Input } from "@/components/ui/input"
 import { Checkbox } from '@/components/ui/checkbox'
 import { roboto, robotoCondensed, robotoBold} from '@/fonts'
+import { FloatingLabelInput } from '@/components/ui/floating-label-input';
  
 const formSchema = z.object({
   firstName: z.string().min(2, {
@@ -56,6 +57,21 @@ export default function LoginPage() {
     console.log(values)
   }
 
+  const placeholderStyle = `
+  ${robotoBold.className}
+  bg-[#EDEDED] 
+  rounded-[50px] 
+  border-t-0 
+  border-b-2 
+  border-x-0 
+  border-black
+  placeholder:${robotoBold.className}
+  placeholder:text-black
+  placeholder:text-[16px]
+  placeholder:font-bold
+  focus:border-none
+  `
+
   return (
     <div className='border-black border-solid border-2 w-full h-full px-6'>
       <div className='flex justify-between py-3'>
@@ -70,7 +86,12 @@ export default function LoginPage() {
           render={({ field }) => (
             <FormItem>
               <FormControl>
-                <Input placeholder="First Name" {...field} />
+                {/* <Input placeholder="First Name" {...field} /> */}
+                <FloatingLabelInput {...field} id="First Name" label={
+                  <span>
+                    First Name <span className='text-[#EF370D] pl-2'>*</span>
+                  </span>
+                }/>
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -82,7 +103,12 @@ export default function LoginPage() {
           render={({ field }) => (
             <FormItem>
               <FormControl>
-                <Input placeholder="Last Name" {...field} />
+                {/* <Input placeholder="Last Name" {...field} /> */}
+                <FloatingLabelInput {...field} id="lastName" label={
+                  <span>
+                    Last Name <span className='text-[#EF370D] pl-2'>*</span>
+                  </span>
+                }/>
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -94,23 +120,14 @@ export default function LoginPage() {
           render={({ field }) => (
             <FormItem>
               <FormControl>
-                <Input 
+                {/* <Input 
                   placeholder={`Email`} {...field}
-                  className={`
-                  ${robotoBold.className}
-                  bg-[#EDEDED] 
-                  rounded-[50px] 
-                  border-t-0 
-                  border-b-2 
-                  border-x-0 
-                  border-black
-                  placeholder:${robotoBold.className}
-                  placeholder:text-black
-                  placeholder:text-[16px]
-                  placeholder:font-bold
-                  focus:border-none
-                  `} 
-                />
+                /> */}
+                <FloatingLabelInput {...field} id="email" label={
+                  <span>
+                    Email <span className='text-[#EF370D] pl-2'>*</span>
+                  </span>
+                }/>
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -122,7 +139,12 @@ export default function LoginPage() {
           render={({ field }) => (
             <FormItem>
               <FormControl>
-                <Input placeholder="Mobile Phone Number" {...field} />
+                {/* <Input placeholder="Mobile Phone Number" {...field} /> */}
+                <FloatingLabelInput {...field} id="phoneNumber" label={
+                  <span>
+                    Mobile Phone Number <span className='text-[#EF370D] pl-2'>*</span>
+                  </span>
+                }/>
               </FormControl>
               <FormMessage />
             </FormItem>

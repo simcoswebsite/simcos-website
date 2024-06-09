@@ -3,7 +3,7 @@ import { bevan, robotoBold } from "@/fonts"
 
 export const DesktopNavbar = () =>{
   return(
-    <nav className="w-full z-40">
+    <nav className="w-full relative max-h-min">
       <div className={`px-4 md:px-16 py-6 flex flex-row justify-end items-center transition duration-500`}>
         <p className={`text-[20px] text-white ${robotoBold.className} px-4`}>HOME</p>
         <p className={`text-[20px] text-white ${robotoBold.className} px-4`}>MENU</p>

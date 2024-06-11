@@ -27,6 +27,9 @@ export default function MenuPage(){
         </div>
       </div>
       <h1 className={`text-[18px] py-2 ${robotoCondensed.className}`}>PROMOTIONS</h1>
+      <div className="min-h-24 min-w-full bg-[#EF370D] rounded-xl">
+
+      </div>
     </div>
   )
 }

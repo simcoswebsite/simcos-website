@@ -18,7 +18,7 @@ import { Checkbox } from '@/components/ui/checkbox'
 import { roboto, robotoCondensed, robotoBold} from '@/fonts'
 import { FloatingLabelInput } from '@/components/ui/floating-label-input';
 
-export const loginSchema = z.object({
+const loginSchema = z.object({
   email: z.string().email({
     message: "Invalid email format.",
   }),

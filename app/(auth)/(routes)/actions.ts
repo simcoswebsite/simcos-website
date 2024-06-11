@@ -5,8 +5,35 @@ import { redirect } from 'next/navigation'
 
 import { createClient } from '@/utils/supabase/server'
 import { z } from 'zod';
-import { formSchema } from './signup/page';
-import { loginSchema } from './login/page';
+
+const formSchema = z.object({
+  firstName: z.string().min(2, {
+    message: "First Name must be at least 2 characters.",
+  }),
+  lastName: z.string().min(2, {
+    message: "Last Name must be at least 2 characters.",
+  }),
+  email: z.string().email({
+    message: "Invalid email format.",
+  }),
+  password:z.string().min(8, {
+    message: 'Password must be at least 8 characters long'
+  }),
+  phoneNumber: z.string().min(2, {
+    message: "Phone Number must be at least 2 characters.",
+  }),
+  enableEmails: z.boolean().default(false).optional(),
+  enableTexts: z.boolean().default(false).optional()
+});
+
+const loginSchema = z.object({
+  email: z.string().email({
+    message: "Invalid email format.",
+  }),
+  password:z.string().min(8, {
+    message: 'Password must be at least 8 characters long'
+  })
+});
 
 export async function login(values: z.infer<typeof loginSchema>) {
   const supabase = createClient()

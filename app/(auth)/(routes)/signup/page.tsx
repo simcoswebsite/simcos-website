@@ -18,7 +18,7 @@ import { Checkbox } from '@/components/ui/checkbox'
 import { roboto, robotoCondensed, robotoBold} from '@/fonts'
 import { FloatingLabelInput } from '@/components/ui/floating-label-input';
 
-export const formSchema = z.object({
+const formSchema = z.object({
   firstName: z.string().min(2, {
     message: "First Name must be at least 2 characters.",
   }),

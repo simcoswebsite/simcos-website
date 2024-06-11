@@ -7,9 +7,6 @@ const AuthLayout = ({children} :{ children: React.ReactNode}) =>{
       flex-col 
       items-center 
       h-full 
-      border-blue-600 
-      border-solid 
-      border-8
       bg-[#EDEDED]
       ">
       <Navbar />

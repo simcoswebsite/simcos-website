@@ -45,7 +45,7 @@ export default function LogInPage() {
   }
 
   return (
-    <div className='border-black border-solid border-2 w-full h-full px-6'>
+    <div className='w-full h-full px-6'>
       <div className='flex justify-between py-3'>
         <h1 className={`text-[20px] ${robotoCondensed.className}`}>Login</h1>
         {/* <p className={`text-[16px] text-[#EF370D] underline ${robotoBold.className}`}>Sign In</p> */}

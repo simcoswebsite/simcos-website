@@ -24,6 +24,7 @@ const buttonVariants = cva(
           /**
            *absolute w-198 h-60 left-97 top-612 bg-[#EBD6B7] border-5 border-solid border-[#EF370D] rounded-full
            */
+        filter: "bg-[#EFEFEF] text-primary-foreground hover:bg-primary/90",
       },
       size: {
         default: "h-10 px-4 py-2",

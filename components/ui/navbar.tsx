@@ -10,9 +10,10 @@ const Navbar = () => {
       min-h-[20vh] 
       justify-center 
       w-full 
-      border-red-600 
-      border-solid border-8
       bg-white
+      border-black 
+      border-solid 
+      border-b-2
       ">
       <Image
         alt="An image of Simco's logo"
@@ -20,7 +21,6 @@ const Navbar = () => {
         height={250}
         width={250}
         style={{
-          border: '1px solid green',
           position: 'absolute'
         }}
       />

@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 export const DesktopLandingPage = () => {
   return (
-      <div className="flex py-24 min-h-full max-h-full min-w-full flex-grow">
+      <div className="flex py-24 min-h-full max-h-full min-w-full flex-grow flex-col md:flex-row">
         <div className="flex flex-col items-stretch basis-1/2 max-h-full max-w-full relative">
           <div className="relative flex flex-col items-center justify-center min-h-full max-h-full">
             <div className="h-full w-full relative basis-1/2">

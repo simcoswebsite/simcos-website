@@ -23,10 +23,12 @@ const config = {
       },
       height: {
         '15': '3.75rem',
-        '58': '14.5625rem'
+        '58': '14.5625rem',
+        '29': '7.25rem'
       },
       width: {
-        '58': '14.5625rem'
+        '58': '14.5625rem',
+        '29': '7.25rem'
       },
       colors: {
         border: "hsl(var(--border))",

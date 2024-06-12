@@ -24,7 +24,7 @@ const buttonVariants = cva(
           /**
            *absolute w-198 h-60 left-97 top-612 bg-[#EBD6B7] border-5 border-solid border-[#EF370D] rounded-full
            */
-        filter: "bg-[#EFEFEF] text-primary-foreground hover:bg-primary/90",
+        filter: "bg-[#EFEFEF] text-primary-foreground hover:bg-[#EF370D]/90",
       },
       size: {
         default: "h-10 px-4 py-2",
@@ -32,7 +32,9 @@ const buttonVariants = cva(
         lg: "h-11 rounded-md px-8",
         icon: "h-10 w-10",
         xl: "pt-6 pb-5 px-3 h-15",
-        nav:"px-6 py-1 ml-10"
+        nav:"px-6 py-1 ml-10",
+        item: "h-11 w-11",
+        tile: "h-29 w-29"
       },
     },
     defaultVariants: {

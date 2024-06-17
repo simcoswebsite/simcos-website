@@ -1,9 +1,8 @@
 'use client'
-import { login, signup } from '../actions'
+import { login, signup, reset } from '../actions'
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
-import Link from 'next/link'
  
 import { Button } from "@/components/ui/button"
 import {
@@ -19,37 +18,33 @@ import { Checkbox } from '@/components/ui/checkbox'
 import { roboto, robotoCondensed, robotoBold} from '@/fonts'
 import { FloatingLabelInput } from '@/components/ui/floating-label-input';
 
-const loginSchema = z.object({
+const resetSchema = z.object({
   email: z.string().email({
     message: "Invalid email format.",
-  }),
-  password:z.string().min(8, {
-    message: 'Password must be at least 8 characters long'
   })
-});
+})
 
-export default function LogInPage() {
-  const form = useForm<z.infer<typeof loginSchema>>({
-    resolver: zodResolver(loginSchema),
+export default function ResetPasswordPage() {
+  const form = useForm<z.infer<typeof resetSchema>>({
+    resolver: zodResolver(resetSchema),
     defaultValues: {
-      email:"",
-      password:""
+      email:""
     },
   })
 
-  async function onSubmit(values: z.infer<typeof loginSchema>) {
+  async function onSubmit(values: z.infer<typeof resetSchema>) {
     try {
-      await login(values);
+      await reset(values);
     } catch (error) {
-      console.error("Error during log-up:", error);
+      console.error("Error during reset:", error);
     }
   }
 
   return (
     <div className='w-full h-full px-6'>
-      <div className='flex justify-between py-3'>
-        <h1 className={`text-[20px] ${robotoCondensed.className}`}>Login</h1>
-        {/* <p className={`text-[16px] text-[#EF370D] underline ${robotoBold.className}`}>Sign In</p> */}
+      <div className='flex flex-col justify-between py-3'>
+        <h1 className={`text-[20px] ${robotoCondensed.className}`}>Forgot Password?</h1>
+        <p className={`text-[13px] ${roboto.className}`}>Please enter your email</p>
       </div>
      <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 border-yellow-500 border-solid border-1">
@@ -69,27 +64,8 @@ export default function LogInPage() {
             </FormItem>
           )}
         />
-        <FormField
-          control={form.control}
-          name="password"
-          render={({ field }) => (
-            <FormItem>
-              <FormControl>
-                <FloatingLabelInput {...field} id="password" label={
-                  <span>
-                    Password
-                  </span>
-                }/>
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
         <div className='flex justify-between py-3'>
-          <Button variant={"auth"} type="submit">Log-In</Button>
-          <Link href='/reset'>
-            <p className={`text-[13px] ${roboto.className} underline`}>Forgot Password?</p>
-          </Link>
+          <Button variant={"auth"} type="submit">Submit</Button>
         </div>
       </form>
     </Form>

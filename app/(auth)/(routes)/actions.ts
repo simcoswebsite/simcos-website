@@ -35,6 +35,19 @@ const loginSchema = z.object({
   })
 });
 
+const resetSchema = z.object({
+  email: z.string().email({
+    message: "Invalid email format.",
+  })
+})
+
+const updateSchema = z.object({
+  newPassword:z.string().min(8, {
+    message: 'Password must be at least 8 characters long'
+  })
+});
+
+
 export async function login(values: z.infer<typeof loginSchema>) {
   const supabase = createClient()
 
@@ -84,3 +97,40 @@ export async function signup(values: z.infer<typeof formSchema>) {
   revalidatePath('/', 'layout')
   redirect('/')
 }
+
+export async function reset(values: z.infer<typeof resetSchema>) {
+  const supabase = createClient()
+
+  // type-casting here for convenience
+  // in practice, you should validate your inputs
+  const data = {
+    email: values.email
+  }
+
+  const { error } = await supabase.auth.resetPasswordForEmail(data.email)
+
+  if (error) {
+    redirect('/error')
+  }
+
+  redirect('/update')
+}
+
+export async function update(values: z.infer<typeof updateSchema>) {
+  const supabase = createClient()
+
+  // type-casting here for convenience
+  // in practice, you should validate your inputs
+  const data = {
+    newPassword: values.newPassword
+  }
+
+  const { error } = await await supabase.auth.updateUser({ password: data.newPassword })
+
+  if (error) {
+    redirect('/error')
+  }
+
+  redirect('/menu')
+}
+
